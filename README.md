@@ -62,6 +62,24 @@ CNDDB and CNPS data can be replaced within the /data folder. These files must be
 
 ## Installation Instructions
 
+#### Configure the environment 
+1. Download and install VS Code if needed: https://code.visualstudio.com/Download
+2. Install Anaconda if needed.
+3. Clone the repository from GitHub. In the terminal, run:
+   ```
+   git clone <git repo link>
+   ```
+4. Create a new conda environment. In the terminal, run:
+   ```
+   conda env create -f environment.yml
+   ```
+5. Activate the conda environment. In the terminal, run:
+   ```
+   conda activate bioweavers-gdf
+   ```
+6. Ensure data is updated on your local machine by creating any missing folders that have been stored in the .gitignore or adding updated data files. To ensure functions operating on these files run smoothly, please change the file names to:
+   -  `CNPS_raw.csv`   (.csv file for updated CNPS data)
+   -  `CNDDB_raw`      (entire folder containing .shp file for updated CNDDB data)
 
 ## Authors and contributors 
 - Jaslyn Miura {[Github](https://github.com/jaslynmiura) | [Website](https://jaslynmiura.github.io/) | [LinkedIn](https://www.linkedin.com/in/jaslyn-miura/)}
