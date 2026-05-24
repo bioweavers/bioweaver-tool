@@ -18,6 +18,8 @@ Bio Weaver Tool
 
 [Data Management](#data-management)
 
+[Installation Instructions](#installation-instructions)
+
 [Authors and contributors](#authors-and-contributors)
 
 ## Tool Description
@@ -25,10 +27,41 @@ Bio Weaver Tool
 The Bio Weaver tool consists of an automated data processing workflow that is integrated with a dynamic platform, where biologists can interact with project-specific data in the form of maps, charts, and tables that can then be exported for their regulatory reporting needs. 
 
 ## Repository Structure
-### In progress- description and tree
+```
+.
+├── data/
+│   ├── cnddb/                # Replace with current CNDDB data folder as needed
+│   └── cnps.csv              # Replace with current CNPS data as needed
+├── docs/
+│   ├── PLAN.md               # Further documentation- in progress
+│   └── PLAN.html
+├── images/                   # Logos and other assets
+├── pages/
+│   ├── 1_Landing.py          # Dashboard page 1
+│   ├── 2_Results.py          # Dashboard page 2
+│   └── 3_Table.py            # Dashboard page 3
+├── src/
+│   ├── create_template.py    # Create PTO Word template         
+│   ├── format_data.py        # Format data for PTO table
+│   ├── geometry.py           # Spatial functions
+│   ├── make_buffer.py        # Generate PTO from template
+│   ├── species.py            # Species map and chart functions
+│   └── pto_template.docx     # Template for PTO table
+├── tests/
+│   └── fixtures/
+├── docker-compose.yml        # Files to create Docker container
+├── Dockerfile         
+├── environment.yml           # Python environment 
+├── Home.py                   # Dashboard landing page
+└── README.md                 
+
+```
 
 ## Data management
-CNDDB and CNPS data can be replaced within the /data folder. 
+CNDDB and CNPS data can be replaced within the /data folder. These files must be named exactly as shown in the repository structure in order for the functions to run properly.
+
+## Installation Instructions
+
 
 ## Authors and contributors 
 - Jaslyn Miura {[Github](https://github.com/jaslynmiura) | [Website](https://jaslynmiura.github.io/) | [LinkedIn](https://www.linkedin.com/in/jaslyn-miura/)}
