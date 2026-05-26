@@ -16,8 +16,6 @@ Bio Weaver Tool
 
 [Repository Structure](#repository-structure)
 
-[Data Management](#data-management)
-
 [Installation Instructions](#installation-instructions)
 
 [Authors and contributors](#authors-and-contributors)
@@ -37,7 +35,7 @@ The Bio Weaver tool consists of an automated data processing workflow that is in
 │   └── PLAN.html
 ├── images/                   # Logos and other assets
 ├── pages/
-│   ├── 1_Landing.py          # Dashboard page 1
+│   ├── 1_Search.py           # Dashboard page 1
 │   ├── 2_Results.py          # Dashboard page 2
 │   └── 3_Table.py            # Dashboard page 3
 ├── src/
@@ -56,30 +54,81 @@ The Bio Weaver tool consists of an automated data processing workflow that is in
 └── README.md                 
 
 ```
-
-## Data management
-CNDDB and CNPS data can be replaced within the /data folder. These files must be named exactly as shown in the repository structure in order for the functions to run properly.
+(Describe repo structure generally here)
 
 ## Installation Instructions
 
 #### Configure the environment 
 1. Download and install VS Code if needed: https://code.visualstudio.com/Download
-2. Install Anaconda if needed.
+2. Install Mambda if needed: https://mamba.readthedocs.io/en/latest/installation/mamba-installation.html 
 3. Clone the repository from GitHub. In the terminal, run:
    ```
-   git clone <git repo link>
+   git clone https://github.com/bioweavers/bioweaver-tool.git 
    ```
-4. Create a new conda environment. In the terminal, run:
+4. Create a new environment. In the terminal, run:
    ```
-   conda env create -f environment.yml
+   mamba env create -f environment.yml
    ```
-5. Activate the conda environment. In the terminal, run:
+5. Activate the environment. In the terminal, run:
    ```
-   conda activate bioweavers-gdf
+   mamba activate bioweavers-gdf
    ```
-6. Ensure data is updated on your local machine by creating any missing folders that have been stored in the .gitignore or adding updated data files. To ensure functions operating on these files run smoothly, please change the file names to:
-   -  `CNPS_raw.csv`   (.csv file for updated CNPS data)
-   -  `CNDDB_raw`      (entire folder containing .shp file for updated CNDDB data)
+
+#### Data Setup and Updates
+Before running the dashboard, ensure that all required datasets are correctly placed and formatted. 
+
+All input data must be stored in the data/ folder. 
+
+Ensure data is updated on your local machine by creating any missing folders that have been stored in the .gitignore or adding updated data files. To ensure functions operating on these files run smoothly, please change the file names to:
+```
+data/
+├── cnddb/          # Current CNDDB data
+│   ├── cnddb.dbf
+│   ├── cnddb.prj
+│   ├── cnddb.shp
+│   └── cnddb.shx
+└── cnps.csv        # Current CNPS data
+```
+Only include the most recent versions of the datasets. 
+
+#### Running the Dashboard Locally
+1. Navigate to the root folder.
+   ```
+   cd bioweaver-tool
+   ```
+2. In the terminal run:
+   ```
+   streamlit run Home.py
+   ```
+   Alternatively, you can manually paste http://localhost:8501 into the browser if needed.
+   
+4. Close the app when finished with analysis. In the terminal, run
+   ```
+   Ctrl C
+   ```
+
+#### Running the Dashboard with Docker
+1. Install Docker Desktop if needed: https://docs.docker.com/desktop/
+2. Launch Docker Desktop
+3. Build Docker image
+  - Ensure that you are in the root folder of the dashboard app, i.e. 
+    ```
+    pwd
+    ```
+    In the terminal should return a file path ending in /bioweaver-tool
+  - In the terminal, run the command to build the app:
+    ```
+    docker-compose up --build
+    ```
+4. Open the dashboard in a browser on your local machine:
+     http://localhost:3009
+5. Alternatively, view the dashboard in Docker Desktop in the containers tab.
+6. Stop the Docker container when you are done with the dashboard.
+  - In the terminal press d to detach, or run
+    ```
+    docker-compose down
+    ```
+  - Alternatively, stop the container in Docker Desktop using the blue square.
 
 ## Authors and contributors 
 - Jaslyn Miura {[Github](https://github.com/jaslynmiura) | [Website](https://jaslynmiura.github.io/) | [LinkedIn](https://www.linkedin.com/in/jaslyn-miura/)}
