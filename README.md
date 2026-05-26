@@ -58,9 +58,11 @@ The Bio Weaver tool consists of an automated data processing workflow that is in
 
 ## Installation Instructions
 
-#### Configure the environment 
+### Configure the environment 
 1. Download and install VS Code if needed: https://code.visualstudio.com/Download
-2. Install Mambda if needed: https://mamba.readthedocs.io/en/latest/installation/mamba-installation.html 
+   
+2. Install Mambda if needed: https://mamba.readthedocs.io/en/latest/installation/mamba-installation.html
+   
 3. Clone the repository from GitHub. In the terminal, run:
    ```
    git clone https://github.com/bioweavers/bioweaver-tool.git 
@@ -74,7 +76,7 @@ The Bio Weaver tool consists of an automated data processing workflow that is in
    mamba activate bioweavers-gdf
    ```
 
-#### Data Setup and Updates
+### Data Setup and Updates
 Before running the dashboard, ensure that all required datasets are correctly placed and formatted. 
 
 All input data must be stored in the data/ folder. 
@@ -91,27 +93,31 @@ data/
 ```
 Only include the most recent versions of the datasets. 
 
-#### Running the Dashboard Locally
+### Running the Dashboard Locally
 1. Navigate to the root folder.
    ```
    cd bioweaver-tool
    ```
+
 2. In the terminal run:
    ```
    streamlit run Home.py
    ```
    Alternatively, you can manually paste http://localhost:8501 into the browser if needed.
    
-4. Close the app when finished with analysis. In the terminal, run
+3. Close the app when finished with analysis. In the terminal, run
    ```
    Ctrl C
    ```
 
-#### Running the Dashboard with Docker
+### Running the Dashboard with Docker
+
 1. Install Docker Desktop if needed: https://docs.docker.com/desktop/
+   
 2. Launch Docker Desktop
+   
 3. Build Docker image
-  - Ensure that you are in the root folder of the dashboard app, i.e. 
+  - Ensure that you are in the root folder of the dashboard app, i.e. running
     ```
     pwd
     ```
@@ -120,15 +126,17 @@ Only include the most recent versions of the datasets.
     ```
     docker-compose up --build
     ```
+
 4. Open the dashboard in a browser on your local machine:
      http://localhost:3009
-5. Alternatively, view the dashboard in Docker Desktop in the containers tab.
-6. Stop the Docker container when you are done with the dashboard.
+   - Alternatively, view the dashboard in Docker Desktop in the containers tab.
+     
+5. Stop the Docker container when you are done with the dashboard.
   - In the terminal press d to detach, or run
     ```
     docker-compose down
     ```
-  - Alternatively, stop the container in Docker Desktop using the blue square.
+    - Alternatively, stop the container in Docker Desktop using the blue square.
 
 ## Authors and contributors 
 - Jaslyn Miura {[Github](https://github.com/jaslynmiura) | [Website](https://jaslynmiura.github.io/) | [LinkedIn](https://www.linkedin.com/in/jaslyn-miura/)}
