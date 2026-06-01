@@ -1,0 +1,14 @@
+services:
+
+  # Dashboard application service - runs the Streamlit app.
+  bioweaver_dashboard:
+    image: bioweaver_dashboard:latest
+    build: .
+    volumes:
+      - ./data:/tmp/data/
+      - ./pages:/pages/
+      - ./src:/src/
+    ports:
+      - 3009:3009
+    environment:
+      - TZ=America/Los_Angeles

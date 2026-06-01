@@ -216,3 +216,7 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Ignore the CNDDB large data set file - (Version 3, renamed as `cnddb`).
+# This data is only used for testing and will be replaced by Rincon.
+data/cnddb/
