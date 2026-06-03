@@ -183,6 +183,7 @@ Choose one of the following:
 - 5-mile (default)
 - 10-mile
 - 9-quad
+
 This step determines how far beyond the project boundary the tool will search for species occurrences.
 
 ### Step 3: Explore Results Page
