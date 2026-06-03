@@ -53,7 +53,7 @@ The Bio Weaver tool consists of an automated data processing workflow that is in
 └── README.md              
 
 ```
-The `data` folder contains the CNDDB and CNPS data, as well as the California statewide index of USGS quads. The `images` folder contains the Rincon and Bio Weaver tool logos. The `pages` folder contains the streamlit pages in order of appearance on the application, with `Home.py` remaining outside of this folder to act and the Home page of the application. The `src` folder contains all python scripts labeled by purpose. The `tests` folder contains all testing material used throughout the project. The `docker-compose` and `Dockerfile` are required for deployment of the application on Docker Desktop. 
+The `data` folder contains the CNDDB and CNPS data, as well as the California statewide index of USGS quads. The `images` folder contains the Rincon and Bio Weaver tool logos. The `pages` folder contains the streamlit pages in order of appearance on the application, with `Home.py` remaining outside of this folder to act and the Home page of the application. The `src` folder contains all Python scripts labeled by purpose. The `tests` folder contains all testing material used throughout the project. The `docker-compose` and `Dockerfile` are required for deployment of the application on Docker Desktop. 
 
 
 ## Installation Instructions
@@ -61,7 +61,7 @@ The `data` folder contains the CNDDB and CNPS data, as well as the California st
 ### Development Environment Setup (One-Time Setup)
 1. Download and install VS Code (optional but recommended): [Download VS Code](https://code.visualstudio.com/Download)
    
-2. Install Mambda: [Mamba Installation- documentation](https://mamba.readthedocs.io/en/latest/installation/mamba-installation.html)
+2. Install Mamba: [Mamba Installation- documentation](https://mamba.readthedocs.io/en/latest/installation/mamba-installation.html)
    
 3. Clone the repository from GitHub. In the terminal, run:
    ```
@@ -134,7 +134,7 @@ Open a terminal and navigate to the project root directory. Confirm you’re in 
 
 4. Stopping the app: Stop the Docker container when you are done with the application. In Docker Desktop, click the square stop button next to the `bioweaver-tool`. 
 
-Within Docker Desktop, the `bioweaver-tool` container can be stopped and restarted as desired throughout the use of the tool- this is the easiest startup method after the application container is first built.
+Within Docker Desktop, the `bioweaver-tool` container can be stopped and restarted as desired throughout the use of the tool. This is the easiest startup method after the application container is first built.
 
 
 ### Data Setup and Updates
@@ -186,7 +186,7 @@ Choose one of the following:
 This step determines how far beyond the project boundary the tool will search for species occurrences.
 
 ### Step 3: Explore Results Page
-- Click the Go to Next Page button
+- Click the 'Go to Next Page' button
 - The application runs the analysis on the backend
 - Results are returned and displayed in the application
 
@@ -199,7 +199,7 @@ After running a query, the application displays results across several component
   - Allows users to hover over each species to see individual attributes
 
 #### Summary Visualizations 
-   - Provide quick insight into returned data- total number of occurences per species
+   - Provide quick insight into returned data - total number of occurrences per species
  
 #### Raw Attribute Tables
   - Contains detailed occurrence records returned from the query for each database (CNDDB and CNPS, respectively)
@@ -207,17 +207,17 @@ After running a query, the application displays results across several component
   - Can be renamed and exported in CSV format
 
 #### Formatted PTO Table
-- Potential to occur- editable with a drop-down menu
-- Habitat Suitability and observation notes- freely editable 
-- Select ‘Save Edits' to save results and repopulate the PTO assigned species count
+- Potential to occur - editable with a drop-down menu
+- Habitat Suitability and observation notes - freely editable 
+- Select 'Save Edits' to save results and repopulate the PTO assigned species count
 - Click 'Export to Word' to export as a Word Document
 - Designed for direct use in environmental reports
 
-Please refer to the full technical documentation for more in-depth information about the Bio Weaver tool useage and design.
+Please refer to the full technical documentation for more in-depth information about the Bio Weaver tool usage and design.
 
 ## Authors and contributors 
-- Jaslyn Miura {[Github](https://github.com/jaslynmiura) | [Website](https://jaslynmiura.github.io/) | [LinkedIn](https://www.linkedin.com/in/jaslyn-miura/)}
+- Jaslyn Miura {[GitHub](https://github.com/jaslynmiura) | [Website](https://jaslynmiura.github.io/) | [LinkedIn](https://www.linkedin.com/in/jaslyn-miura/)}
 
-- Melannie Moreno Rolón {[Github](https://github.com/mmorenorolon) | [Website](https://mmorenorolon.github.io/) | [LinkedIn](https://www.linkedin.com/in/melanniemoreno/)}
+- Melannie Moreno Rolón {[GitHub](https://github.com/mmorenorolon) | [Website](https://mmorenorolon.github.io/) | [LinkedIn](https://www.linkedin.com/in/melanniemoreno/)}
 
-- Ava Robillard {[Github](https://github.com/avarobillard) | [Website](https://avarobillard.github.io/) | [LinkedIn](https://www.linkedin.com/in/avarobillard/)}
+- Ava Robillard {[GitHub](https://github.com/avarobillard) | [Website](https://avarobillard.github.io/) | [LinkedIn](https://www.linkedin.com/in/avarobillard/)}
